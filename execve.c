@@ -37,4 +37,6 @@ int execute_command(char **pt)
 		else
 			return (1);
 	}
+	return (0);
 }
+

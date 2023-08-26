@@ -24,10 +24,10 @@ return (result);
 
 /**
  * custom_exit_command - Frees user input and exits the main program.
- * @str: User's command into the shell (e.g. "exit 99").
- * @env: Environmental variables to free in case of error.
- * @num: Number of the user's command line input.
- * @command: Command to free.
+ * @args: User's command into the shell (e.g. "exit 99").
+ * @environment: Environmental variables to free in case of error.
+ * @command_num: Number of the user's command line input.
+ * @command_tokens: Command to free.
  *
  * Return: 0 if successful, 2 if failed.
  */

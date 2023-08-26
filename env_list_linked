@@ -27,8 +27,7 @@ list_t *create_env_linked_list(char **env_vars)
  */
 int print_env(char **user_command, list_t *env_list)
 {
-	free_double_pointer (user_command); 
-	display_list (env_list); 
+	free_double_pointer (user_command);
+	display_list (env_list);
 	return (0);
 }
-

@@ -56,7 +56,7 @@ int custom_setenv(list_t **env_list, char *var_name, char *dir_path)
 	concatenated = _strdup(var_name); /* Create concatenated string */
 	concatenated = _strcat(concatenated, "=");
 	concatenated = _strcat(concatenated, dir_path);
-	index = find_env(*env_list, var_name); /* Get index of env var in link list */
+	index = find_environment_variable(*env_list, var_name);
 
 	/* Traverse to the index, free node data, reassign data */
 	node = *env_list;

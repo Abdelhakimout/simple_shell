@@ -50,7 +50,7 @@ char **custom_str_tok(char *input_str, char *delimiter)
 	while (str_index < str_end)
 	{
 		/* Calculate length for each token pointer in the array */
-		token_length = token_count(input_str, str_index, delim_char);
+		token_length = custom_token_length(input_str, str_index, delim_char);
 		tokens[token_index] = malloc(sizeof(char) * (token_length + 1));
 		if (tokens[token_index] == NULL)
 			return (NULL);

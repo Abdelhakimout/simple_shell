@@ -129,4 +129,3 @@ void free_linked_list(list_t *list)
 		free(current_node);
 	}
 }
-

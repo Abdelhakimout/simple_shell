@@ -4,7 +4,7 @@
  * custom_string_to_int - Converts a string to an integer.
  * @input_str: The input string.
  *
- * Return: The integer value if successful, or -1 if the string contains non-numbers.
+ * Return: The int value if success, or -1 if the string contains non-numbers.
  */
 int custom_string_to_int(char *input_str)
 {
@@ -52,4 +52,3 @@ free_double_pointer(command_tokens);
 
 exit(exit_value);
 }
-

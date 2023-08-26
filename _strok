@@ -106,4 +106,3 @@ char **_strtok(char *input, char *delimiter)
 	tokens[token_index] = NULL;
 	return (tokens);
 }
-

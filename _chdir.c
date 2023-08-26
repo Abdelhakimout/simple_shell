@@ -41,7 +41,7 @@ char *_strcat(char *destination, char *source)
 }
 
 /**
- * custom_setenv - custom version of _setenv by concatenating strings before setting
+ * custom_setenv - custom version of _setenv by concatenat strings before set
  * @env_list: environmental variable linked list
  * @var_name: environmental variable name (e.g. "OLDPWD")
  * @dir_path: directory path (e.g. "/home/user/directory")
@@ -56,7 +56,7 @@ int custom_setenv(list_t **env_list, char *var_name, char *dir_path)
 	concatenated = _strdup(var_name); /* Create concatenated string */
 	concatenated = _strcat(concatenated, "=");
 	concatenated = _strcat(concatenated, dir_path);
-	index = find_env(*env_list, var_name); /* Get index of env var in linked list */
+	index = find_env(*env_list, var_name); /* Get index of env var in link list */
 
 	/* Traverse to the index, free node data, reassign data */
 	node = *env_list;
@@ -168,4 +168,3 @@ int custom_cd(char **user_input, list_t *env_list, int command_num)
 	free_double_pointer(user_input); /* Free user input */
 	return (exit_code);
 }
-

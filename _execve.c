@@ -1,7 +1,7 @@
 #include "rakia_hakim.h"
 
 /**
- * custom_exit - frees memory allocated for user's command and linked list before exiting
+ * custom_exit - frees memory allocated for user com and link list before exit
  * @user_command: user's typed command
  * @env_list: linked list of environment variables
  */
@@ -24,7 +24,6 @@ int execute_command(char **command, list_t *env_list, int command_num)
 	char *command_path;
 	int status = 0, is_absolute = 0;
 	pid_t pid;
-
 	/* Check if the command has an absolute path */
 	if (access(command[0], F_OK) == 0)
 	{
@@ -34,7 +33,6 @@ int execute_command(char **command, list_t *env_list, int command_num)
 	/* Otherwise, determine full path of the command */
 	else
 		command_path = determine_full_path(command[0], env_list);
-
 	/* If the command is not executable, free resources */
 	if (access(command_path, X_OK) != 0)
 	{
@@ -49,11 +47,11 @@ int execute_command(char **command, list_t *env_list, int command_num)
 		{
 			if (execve(command_path, command, NULL) == -1)
 			{
-				command_not_found(command[0], command_num, env_list); /* Special error message */
+				command_not_found(command[0], command_num, env_list); /* Special er mes */
 				custom_exit(command, env_list);
 			}
 		}
-		else /* If parent process, wait for child to complete and then free resources */
+		else /* If parent proc, wait for child to complete and then free resourc */
 		{
 			wait(&status);
 			free_double_pointer(command);
@@ -63,4 +61,3 @@ int execute_command(char **command, list_t *env_list, int command_num)
 	}
 	return (0);
 }
-

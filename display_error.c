@@ -92,4 +92,3 @@ void illegal_number_error(char *num_str, int command_num, list_t *env_list)
 	write(STDOUT_FILENO, num_str, count);
 	write(STDOUT_FILENO, "\n", 1);
 }
-

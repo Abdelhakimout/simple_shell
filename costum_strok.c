@@ -70,4 +70,3 @@ char **custom_str_tok(char *input_str, char *delimiter)
 	tokens[token_index] = NULL; /* Set the last array pointer to NULL */
 	return (tokens);
 }
-

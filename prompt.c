@@ -29,7 +29,7 @@ int custom_build_in(char **command_tokens, list_t *env_list, int command_line_nu
 	}
 	else if (_strcmp(command_tokens[0], "env") == 0)
 	{
-		_env(env_list);
+		print_env(command_tokens, env_list);
 		result = 1;
 	}
 	else if (_strcmp(command_tokens[0], "cd") == 0)

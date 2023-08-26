@@ -41,7 +41,7 @@ void handle_non_interactive(list_t *env_list)
 		command_line_num++;
 		tokens = NULL; /* Tokenize each command in the array of commands */
 		tokens = _strtok(command_lines[n], " ");
-		exit_status = custom_built_in(tokens, env_list, command_line_num, command_lines);
+		exit_status = custom_build_in(tokens, env_list, command_line_num, command_lines);
 		if (exit_status)
 		{
 			n++;

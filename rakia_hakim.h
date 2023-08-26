@@ -25,7 +25,6 @@ typedef struct list
 
 } list_t;
 
-char *_strcat(char *destination, char *source);
 int custom_setenv(list_t **env_list, char *var_name, char *dir_path);
 void change_directory_only(list_t *env_list, char *current_dir);
 int execute_cd(list_t *env_list, char *current_dir, char *target_dir, char *arg_str, int line_num);

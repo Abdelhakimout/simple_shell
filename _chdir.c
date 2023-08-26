@@ -1,46 +1,6 @@
 #include "rakia_hakim.h"
 
 /**
- * _strcat - concatenate two strings excluding the first character ("~" in cd)
- * @destination: string to be appended to
- * @source: string to append
- * Return: concatenated string
- */
-char *_strcat(char *destination, char *source)
-{
-	int dest_len = 0;
-	int src_len = 0;
-	int total_len = 0;
-	int j = 0;
-
-	/* Calculate total length of both strings for memory reallocation */
-	while (destination[dest_len] != '\0')
-	{
-		dest_len++;
-		total_len++;
-	}
-	while (source[src_len] != '\0')
-	{
-		src_len++;
-		total_len++;
-	}
-
-	/* Reallocate memory for destination string */
-	destination = _realloc(destination, dest_len, sizeof(char) * (total_len + 1));
-
-	j = 1; /* Ignore the first character */
-	while (source[j] != '\0')
-	{
-		destination[dest_len] = source[j];
-		dest_len++;
-		j++;
-	}
-	destination[dest_len] = '\0';
-
-	return (destination);
-}
-
-/**
  * custom_setenv - custom version of _setenv by concatenat strings before set
  * @env_list: environmental variable linked list
  * @var_name: environmental variable name (e.g. "OLDPWD")

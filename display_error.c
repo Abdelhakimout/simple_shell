@@ -24,7 +24,10 @@ void command_not_found(char *command, int command_num, list_t *env_list)
 	write(STDOUT_FILENO, num, count);
 	free(num);
 	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, command, custom_strlen(command));
+	count = 0;
+	while (command[count] != '\0')
+		count++;
+	write(STDOUT_FILENO, command, count);
 	write(STDOUT_FILENO, ": ", 2);
 	write(STDOUT_FILENO, "not found\n", 10);
 }
